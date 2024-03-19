@@ -1,10 +1,13 @@
+import Header from "../../Layouts/Header/Header";
 
 
 const Home = () => {
     return (
-        <div>
-            <h2>this is home</h2>
-        </div>
+        <>
+            <div className="header-area">
+                <Header></Header>
+           </div>
+        </>
     );
 };
 
