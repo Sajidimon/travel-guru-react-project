@@ -27,7 +27,7 @@ const Navbar = () => {
                         </div>
                         <a className="btn btn-ghost text-xl">daisyUI</a>
                         <div className="form-control ml-5">
-                            <input type="text" placeholder="Search your destination" className="input input-bordered w-24 md:w-auto" />
+                            <input type="text" placeholder="Search your destination" className="input input-bordered w-24 md:w-auto bg-white" />
                         </div>
                     </div>
                     <div className="navbar-center hidden lg:flex">
