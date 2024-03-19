@@ -5,6 +5,7 @@ import Marquee from "react-fast-marquee";
 import slide1 from '../../assets/Sajek.png';
 import slide2 from '../../assets/Sreemongol.png';
 import slide3 from '../../assets/sundorbon.png';
+import { Link } from "react-router-dom";
 
 const Header = () => {
     return (
@@ -13,9 +14,9 @@ const Header = () => {
                 <Navbar></Navbar>
                 <div className="flex">
                     <div className="hero-left">
-                        <h2 className="text-4xl uppercase">Coxs bazar</h2>
+                        <h2 className="font-bold text-4xl uppercase">Coxs bazar</h2>
                         <p className="m-4">Coxs Bazar is a city, fishing port, tourism centre and district headquarters in southeastern Bangladesh. It is famous mostly for its long natural sandy beach, and it ...</p>
-                        <button className="btn btn-warning">Booking <FaLongArrowAltRight></FaLongArrowAltRight></button>
+                        <Link to='/booking'><button className="btn btn-warning">Booking <FaLongArrowAltRight></FaLongArrowAltRight></button></Link>
                     </div>
                     <div>
                         <div className="carousel justify-center items-center w-full">
