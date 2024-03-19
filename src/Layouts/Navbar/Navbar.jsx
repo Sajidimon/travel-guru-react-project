@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-
+import logo from '../../assets/logo.png';
 
 const Navbar = () => {
 
@@ -25,7 +25,7 @@ const Navbar = () => {
                                 {menu}
                             </ul>
                         </div>
-                        <a className="btn btn-ghost text-xl">daisyUI</a>
+                        <img src={logo} alt="" className="w-1/4 h-1/4" />
                         <div className="form-control ml-5">
                             <input type="text" placeholder="Search your destination" className="input input-bordered w-24 md:w-auto bg-white" />
                         </div>
