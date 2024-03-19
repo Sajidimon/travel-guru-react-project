@@ -9,3 +9,16 @@
 .header a {
     color: black;
 }
+
+.carousel img {
+    width: 350px;
+    height: 400px;
+}
+
+.hero-left {
+    margin-top: 150px;
+}
+
+.hero-left h2, p{
+    color: #333;
+}
