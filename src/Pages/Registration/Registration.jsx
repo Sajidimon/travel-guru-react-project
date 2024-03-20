@@ -1,11 +1,23 @@
 import { Link } from "react-router-dom";
 import Navbar from "../../Layouts/Navbar/Navbar";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { GoogleAuthProvider, createUserWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import auth from "../../Firebase/Firebase.init";
 
 
 const Registration = () => {
 
+    const googleLogin = () => {
+
+        const provider = new GoogleAuthProvider();
+
+        signInWithPopup(auth, provider)
+            .then(result => {
+                console.log(result.user)
+            })
+            .catch(error => {
+                console.error(error)
+            })
+    }
 
     const handleregistration = e => {
         e.preventDefault();
@@ -14,11 +26,12 @@ const Registration = () => {
 
         createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
-            console.log(result.user)
+                console.log(result.user)
             })
             .catch(error => {
-            console.error(error)
-        })
+                console.error(error)
+            })
+
     }
 
     return (
@@ -32,7 +45,7 @@ const Registration = () => {
                             <button className="btn btn-outline btn-primary btn-wide">Continue with Facebook</button>
                             <br />
                             <br />
-                            <button className="btn btn-outline btn-warning btn-wide">Continue with Google</button>
+                            <button onClick={googleLogin} className="btn btn-outline btn-warning btn-wide">Continue with Google</button>
                         </div>
                         <div className="card shrink-0 w-full max-w-sm shadow-2xl">
                             <form onSubmit={handleregistration} className="card-body">
