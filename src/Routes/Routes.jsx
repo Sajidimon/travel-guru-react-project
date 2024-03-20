@@ -3,6 +3,7 @@ import Roots from "../Roots/Roots";
 import Home from "../Pages/Home/Home";
 import Booking from "../Pages/Booking/Booking";
 import Login from "../Pages/Login/Login";
+import Registration from "../Pages/Registration/Registration";
 
 
 
@@ -22,6 +23,10 @@ const routes = createBrowserRouter([
             {
                 path: '/login',
                 element: <Login></Login>
+            },
+            {
+                path: '/registration',
+                element: <Registration></Registration>
             }
         ]
     }
