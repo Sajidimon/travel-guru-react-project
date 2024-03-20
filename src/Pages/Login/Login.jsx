@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Navbar from "../../Layouts/Navbar/Navbar";
 
 
@@ -28,6 +29,7 @@ const Login = () => {
                                 <div className="form-control mt-6">
                                     <button className="btn btn-primary">Login</button>
                                 </div>
+                                <p className="text-white">Don't Have an account ? <Link to="/registration"><span className="text-yellow-500 font-bold">Create new account</span></Link> </p>
                             </form>
                         </div>
                         <div>
