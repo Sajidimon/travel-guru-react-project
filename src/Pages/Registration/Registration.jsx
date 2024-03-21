@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Navbar from "../../Layouts/Navbar/Navbar";
-import { GoogleAuthProvider, createUserWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import { GoogleAuthProvider, createUserWithEmailAndPassword, sendEmailVerification, signInWithPopup } from "firebase/auth";
 import auth from "../../Firebase/Firebase.init";
 import { useState } from "react";
 import { IoIosEyeOff, IoMdEye } from "react-icons/io";
@@ -56,6 +56,13 @@ const Registration = () => {
                 console.error(error)
                 setRegisterError('Email already in use');
             })
+
+        //Send a user a verification email
+
+        sendEmailVerification(auth.currentUser)
+            .then(() => {
+            alert('Check your email & Verify it')
+        })
 
     }
 
